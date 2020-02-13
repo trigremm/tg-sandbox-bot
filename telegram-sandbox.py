@@ -10,8 +10,8 @@ from aiogram.types import ReplyKeyboardRemove, \
     InlineKeyboardMarkup, InlineKeyboardButton, ContentType
 
 
-#logging.basicConfig(level=logging.DEBUG)
 logging.basicConfig(level=logging.INFO)
+#logging.basicConfig(level=logging.DEBUG)
 
 API_TOKEN = os.getenv("TELEGRAM_API_TOKEN")
 #PROXY_URL = os.getenv("TELEGRAM_PROXY_URL")
@@ -56,7 +56,6 @@ async def process_hi6_command(message: types.Message):
 @dp.message_handler(content_types=ContentType.CONTACT)
 async def echo2(message: types.Message):
     """ echo """
-
     await message.answer(message.contact["phone_number"])
 
 
