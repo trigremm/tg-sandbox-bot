@@ -9,11 +9,11 @@ from aiogram.types import ReplyKeyboardRemove, \
     ReplyKeyboardMarkup, KeyboardButton, \
     InlineKeyboardMarkup, InlineKeyboardButton, ContentType
 
-
+from API_TOKEN import API_TOKEN
 logging.basicConfig(level=logging.INFO)
 #logging.basicConfig(level=logging.DEBUG)
 
-API_TOKEN = os.getenv("TELEGRAM_API_TOKEN")
+#API_TOKEN = os.getenv("TELEGRAM_API_TOKEN")
 #PROXY_URL = os.getenv("TELEGRAM_PROXY_URL")
 #PROXY_AUTH = aiohttp.BasicAuth(
 #   login=os.getenv("TELEGRAM_PROXY_LOGIN"),
