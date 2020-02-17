@@ -1,0 +1,17 @@
+# cp tg-sandbox-bot.service /etc/systemd/system/
+[Unit]
+Description=Telegram Sandbox Bot
+After=syslog.target
+After=network.target
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/home/название вашего юзера/название папки в которой лежит бот
+ExecStart=~/miniconda3/envs/tg-sandbox/bin/python ~/git/tg-sandbox-bot/tg-sandbox-bot.py
+
+RestartSec=10
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
