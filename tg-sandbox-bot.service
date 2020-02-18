@@ -7,7 +7,7 @@ After=network.target
 Type=simple
 User=root
 WorkingDirectory=/root/git/tg-sandbox-bot
-ExecStart=/root/miniconda3/envs/tg-sandbox/bin/python /root/git/tg-sandbox-bot/tg-sandbox-bot.py
+ExecStart=/root/miniconda3/envs/tg-sandbox-bot/bin/python /root/git/tg-sandbox-bot/tg-sandbox-bot.py
 
 RestartSec=10
 Restart=always
