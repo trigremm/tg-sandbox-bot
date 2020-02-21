@@ -91,8 +91,7 @@ async def process_slash_ip(message: types.Message):
     try:
         host_name = socket.gethostname()
         host_ip = socket.gethostbyname(host_name)
-        reply = f"Hostname : host_name\n"
-        "IP : {host_ip}\n"
+        reply = f"Hostname : {host_name}\nIP : {host_ip}\n"
     except:
         reply = "Unable to get Hostname and IP"
     await message.reply(reply)
