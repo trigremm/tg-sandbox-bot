@@ -90,6 +90,7 @@ async def process_hi6_command(message: types.Message):
 async def process_hi6_command(message: types.Message):
     await message.reply('this is /ip option')
 
+
 # what other types can i use ?
 @dp.message_handler(content_types=ContentType.CONTACT)
 async def echo2(message: types.Message):
@@ -102,6 +103,7 @@ async def echo(message: types.Message):
     """ echo """
     user = types.User.get_current()
     await message.answer(message.text)
+
 
 if __name__ == '__main__':
     executor.start_polling(dp, skip_updates=True)
