@@ -59,34 +59,34 @@ async def send_welcome(message: types.Message):
 
 #bot.py
 @dp.message_handler(commands=['phone_number'])
-async def process_hi6_command(message: types.Message):
+async def process_slash_phone_number(message: types.Message):
     await message.reply("cusom keyboard", reply_markup=markup_request)
 
 
 @dp.message_handler(commands=['/user'])
-async def process_hi6_command(message: types.Message):
+async def process_slash_user(message: types.Message):
     user = types.User.get_current()
     await message.reply(user)
 
 
 @dp.message_handler(commands=['id'])
-async def process_hi6_command(message: types.Message):
+async def process_slash_id(message: types.Message):
     user = types.User.get_current()
     await message.reply(user["id"])
 
 
 @dp.message_handler(commands=['todo'])
-async def process_hi6_command(message: types.Message):
+async def process_slash_todo(message: types.Message):
     await message.reply('this is /todo option')
 
 
 @dp.message_handler(commands=['state'])
-async def process_hi6_command(message: types.Message):
+async def process_slash_state(message: types.Message):
     await message.reply('this is /state option')
 
 
 @dp.message_handler(commands=['ip'])
-async def process_hi6_command(message: types.Message):
+async def process_slash_ip(message: types.Message):
     import socket
     try:
         host_name = socket.gethostname()
@@ -100,7 +100,7 @@ async def process_hi6_command(message: types.Message):
 
 # what other types can i use ?
 @dp.message_handler(content_types=ContentType.CONTACT)
-async def echo2(message: types.Message):
+async def process_type_contact(message: types.Message):
     """ echo """
     await message.answer(message.contact["phone_number"])
 
