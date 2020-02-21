@@ -30,7 +30,7 @@ from TELEGRAM_ACCESS_ID import TELEGRAM_ACCESS_ID
 
 # init bot with given options, what else can i do here?
 # bot = Bot(token=API_TOKEN, proxy=PROXY_URL, proxy_auth=PROXY_AUTH)
-bot = Bot(token=TELEGRAM_API_TOKEN)
+bot = Bot(token=TELEGRAM_BOT_TOKEN)
 
 # init dispatcher - what is dispatcher
 dp = Dispatcher(bot)
