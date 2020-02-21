@@ -51,7 +51,6 @@ async def send_welcome(message: types.Message):
         "/phone_number to return phone number\n"
         "/id to return id\n"
         "/ip for ip\n"
-        "/hostmane to show hostname\n"
         "/todo to show todo list\n"
         "/state to show state\n"
         "/uptime show uptime\n"
@@ -88,7 +87,15 @@ async def process_hi6_command(message: types.Message):
 
 @dp.message_handler(commands=['ip'])
 async def process_hi6_command(message: types.Message):
-    await message.reply('this is /ip option')
+    import socket
+    try:
+        host_name = socket.gethostname()
+        host_ip = socket.gethostbyname(host_name)
+        reply = f"Hostname : host_name\n"
+        "IP : {host_ip}\n"
+    except:
+        reply = "Unable to get Hostname and IP"
+    await message.reply(reply)
 
 
 # what other types can i use ?
