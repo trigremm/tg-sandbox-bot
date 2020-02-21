@@ -2,4 +2,4 @@ cp tg-sandbox-bot.service /etc/systemd/system/
 sudo systemctl daemon-reload
 sudo systemctl enable tg-sandbox-bot
 sudo systemctl start tg-sandbox-bot
-sudo systemctl status tg-sandbox-bot
+sudo systemctl status tg-sandbox-bot -l
