@@ -1,5 +1,5 @@
 # telegram sandbox bot
 
-bot to test features and practice 
+bot to test features and practice
 
-https://github.com/alexey-goloburdin/telegram-finance-bot
+from https://github.com/alexey-goloburdin/telegram-finance-bot
