@@ -1,7 +1,7 @@
 # pip freeze
 aiogram==2.6.1
 # aiogram dependencies
-aiohttp==3.6.2
+aiohttp==3.7.4
 async-timeout==3.0.1
 attrs==19.3.0
 Babel==2.8.0
